@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TC01",
+    "type": "direct_query",
+    "question": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
+    "expected_behavior": "Chatbot trả lời trực tiếp từ System Prompt, không cần gọi bất kỳ Tool nào.",
+    "complexity": "Low"
+  },
+  {
+    "id": "TC02",
+    "type": "single_tool_query",
+    "question": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "expected_behavior": "Agent nhận diện nhu cầu tra cứu, tự động phát sinh Tool Call 'academic_query' với mã SV2026001.",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC03",
+    "type": "appointment_booking",
+    "question": "Hãy gửi thông báo lịch phỏng vấn cho ứng viên Nguyễn Văn A (Mã Ứng viên: UV2024001) vào lúc 9h sáng ngày 20/10/2026.",
+    "expected_behavior": "Agent tự động phát sinh Tool Call đặt lịch phỏng vấn với đúng thời gian và thông tin ứng viên.",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC04",
+    "type": "multi_step_reasoning",
+    "question": "Bạn hãy tra cứu tiêu chí tuyển dụng cho vị trí Data Scientist, sau đó đặt lịch phỏng vấn cho ứng viên Trần Thị B vào lúc 14h ngày mai.",
+    "expected_behavior": "Agent thực hiện chuỗi suy luận ReAct: Tra cứu tiêu chí tuyển dụng của vị trí trước, sau đó tiến hành đặt lịch phỏng vấn.",
+    "complexity": "High"
+  },
+  {
+    "id": "TC05",
+    "type": "edge_case_handling",
+    "question": "Hãy tra cứu tiêu chí tuyển dụng cho vị trí Kỹ sư hàng không vũ trụ (Mã vị trí: AE999).",
+    "expected_behavior": "Agent nhận kết quả NOT_FOUND từ Tool và đưa ra phản hồi lịch sự, chính xác không bịa đặt dữ liệu.",
+    "complexity": "Medium"
+  }
+]
